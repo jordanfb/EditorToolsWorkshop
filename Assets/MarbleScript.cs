@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class MarbleScript : MonoBehaviour {
 
     [SerializeField]
-    private float gravityScalar;
+    private MarbleInformation info;
+
+    [Space]
+    [Space]
+    [Header("This is the section on colors")]
     [SerializeField]
-    private float radius;
+    private Color marbleColor;
+    [HideInInspector]
+    public Color donteditthis;
 
 	// Use this for initialization
 	void Start () {
-        transform.localScale = radius * Vector3.one;
-        GetComponent<Rigidbody2D>().gravityScale = gravityScalar;
+        transform.localScale = info.marbleRadius * Vector3.one;
+        GetComponent<Rigidbody2D>().gravityScale = info.gravityScalar;
 	}
 	
 	// Update is called once per frame

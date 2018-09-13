@@ -18,8 +18,10 @@ public class WallScript : MonoBehaviour {
         SetMesh();
 	}
 
-    void SetMesh()
+    public void SetMesh()
     {
+        meshFilter = GetComponent<MeshFilter>();
+        polyCollider = GetComponent<PolygonCollider2D>();
         Triangulator triangulator = new Triangulator(meshPoints);
         int[] triangles = triangulator.Triangulate();
         mesh = new Mesh();
