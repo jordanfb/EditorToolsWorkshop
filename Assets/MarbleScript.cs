@@ -6,8 +6,8 @@ public class MarbleScript : MonoBehaviour {
 
     [SerializeField]
     private float gravityScalar;
-    [SerializeField]
-    private float radius;
+    [HideInInspector]
+    public float radius;
 
 	// Use this for initialization
 	void Start () {
