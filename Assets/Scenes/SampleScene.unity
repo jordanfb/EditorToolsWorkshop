@@ -563,5 +563,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ef81f2951bfd84eaa4d8530a1e12be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityScalar: 0
-  radius: 0
+  gravityScalar: 1
+  radius: 1
